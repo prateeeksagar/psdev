@@ -4,11 +4,6 @@ import nodemailer from 'nodemailer'
 import { NextRequest, NextResponse } from 'next/server';
 
 
-type ResponseData = {
-  message: string
-  success: boolean
-}
-
 export async function POST(req: NextRequest) {
   
   if (req.method === 'POST') {
