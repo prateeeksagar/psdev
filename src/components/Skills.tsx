@@ -11,7 +11,7 @@ const Skills = () => {
           {techStack.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center">
               <div className="w-8 h-8  md:w-12 md:h-12 mb-2">
-                <img src={tech.icon} alt={tech.name} className="w-full h-full object-contain" />
+                <img src={tech.icon} alt={tech.name} className="w-full h-full object-contain dark:text-white" />
               </div>
               <span className="text-sm text-center">{tech.name}</span>
             </div>

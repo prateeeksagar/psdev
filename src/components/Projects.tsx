@@ -80,12 +80,13 @@ const ProjectCard = ({
             ))}
           </div>
           <div className="flex justify-end space-x-2 ">
-            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            {githubLink && <a href={githubLink} target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
-            </a>
-            <a href={liveLink} target="_blank" rel="noopener noreferrer">
+            </a>}
+
+            {liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-5 w-5" />
-            </a>
+            </a>}
           </div>
         </CardContent>
       </Card>

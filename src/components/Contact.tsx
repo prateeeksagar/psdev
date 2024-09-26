@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Download } from 'lucide-react';
+import { toast } from "sonner"
 
 
 
@@ -11,12 +12,31 @@ const Contact = () => {
 
     const [mail, setMail] = useState("");
     
-    const handleSubmit = () => {
-        
-    }
-
-    const downloadResume = () => {
-
+    const handleSubmit = async () => {
+        console.log("function clicked")
+        console.log("mail", mail)
+        try {
+            const reqbody = { email: mail }
+            if(mail) {
+                const response = await fetch('/api/sendMailer', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(reqbody),
+                });
+                const data = await response.json();
+                console.log("this is the response",data)
+                console.log(data)
+                if(data.success) {
+                    toast("Mail has been sent to me.")
+                } else {
+                    toast("Why not to try whatsapp? mail service is down!")
+                }
+            }
+            
+        } catch (error) {
+            console.log(error);
+            toast("Why not to try whatsapp? mail service is down!")
+        }
     }
 
   return (
