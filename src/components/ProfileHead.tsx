@@ -1,9 +1,9 @@
 "use client"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+// import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { useTheme } from "next-themes"
-import { Button } from "./ui/button";
+// import { useTheme } from "next-themes"
+// import { Button } from "./ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";

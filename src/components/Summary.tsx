@@ -22,7 +22,7 @@ const Summary = () => {
         {/* <Button variant="link" onClick={() => router.push('/work')}>Work Experience</Button> */}
       </div>
       <p>
-        I'm a passionate Full-Stack Developer with almost{" "}
+        I&apos;m a passionate Full-Stack Developer with almost{" "}
         <b>2 years of experience</b> as a working professional. I love crafting
         clean, efficient, and scalable web applications. With a strong
         foundation in backend services and a keen eye for frontend design, I

@@ -9,7 +9,6 @@ import {
 } from "./ui/card";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import Footer from "./Footer";
 
 const WorkCard = ({
   company,

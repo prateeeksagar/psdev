@@ -1,5 +1,5 @@
 
-import { NextApiRequest, NextApiResponse } from 'next';
+import {  NextApiResponse } from 'next';
 import nodemailer from 'nodemailer'
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -9,10 +9,10 @@ type ResponseData = {
   success: boolean
 }
 
-export async function POST(req: NextRequest, res: NextApiResponse<ResponseData>) {
+export async function POST(req: NextRequest) {
   
   if (req.method === 'POST') {
-  let {email} = await req.json();
+  const {email} = await req.json();
 
   console.log("in the handler",email)
 

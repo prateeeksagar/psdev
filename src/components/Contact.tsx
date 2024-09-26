@@ -47,7 +47,7 @@ const Contact = () => {
                     <div>Want to hire me?</div>
                     <a href="https://drive.google.com/uc?export=download&id=1x7hurM0aWEcMQXt-lUexTLtULUMF8MuW"><Button variant='ghost'>Resume <Download className='ml-2 h-4 w-4'/></Button></a>
                     </CardTitle>
-                <CardDescription className='scroll-m-20 text-sm'>Drop your message! Let's discuss.</CardDescription>
+                <CardDescription className='scroll-m-20 text-sm'>Drop your message! Let&apos;s discuss.</CardDescription>
             </CardHeader>
             <CardContent className='grid grid-row-2'>
                 <div className='border-b-2 py-4'>
