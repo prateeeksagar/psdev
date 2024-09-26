@@ -37,8 +37,8 @@ export const techStack = [
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     },
     {
-      name: "PostgreSQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      name: "mySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {
       name: "Docker",
@@ -56,25 +56,25 @@ export const projectData = [
     title: "Notes App",
     desciption: "Full stack note taking app where you can track your work",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    tags: ['react', 'nodejs', 'mongodb', 'tailwind'],
-    githubLink: "https://www.google.com",
-    liveLink: "https://www.google.com"
+    tags: ['nextjs', 'nodejs', 'mongodb', 'tailwind'],
+    githubLink: "https://github.com/prateeeksagar/notes-frontend",
+    liveLink: "https://notes-frontend-weld.vercel.app/"
   },
   {
     title: "Airline Reservation Backend",
     desciption: "Microservice backend for reserving air tickets",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    tags: ['reactjs', 'nodejs', 'mysql', 'sequelize'],
-    githubLink: "https://www.google.com",
+    tags: ['reactjs', 'nodejs', 'mysql', 'sequelize','express'],
+    githubLink: "http://github.com/prateeeksagar/FlightsandSearchService",
     liveLink: ""
   },
   {
     title: "Medium Blog App",
-    desciption: "Full stack note taking app where you can",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    tags: ['nextjs', 'nodejs', 'mongodb'],
-    githubLink: "https://www.google.com",
-    liveLink: "https://www.google.com"
+    desciption: "Blogging Application like medium.com",
+    image: "https://www.oceanlinkglobal.com/wp-content/uploads/2020/06/placeholder.png",
+    tags: ['typescript', 'nodejs', 'postgreSQL', 'prisma', 'hono'],
+    githubLink: "http://github.com/prateeeksagar/medium-project",
+    liveLink: ""
   }
 ]
 

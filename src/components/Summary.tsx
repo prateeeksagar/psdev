@@ -18,7 +18,7 @@ const Summary = () => {
         <h2 className="mt-10 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight transition-colors first:mt-0">
           Summary
         </h2>
-        <Link href={'/work'}><Button variant="link">Work Experience</Button></Link>
+        <Link href={'/work'} ><Button variant="link" className="underline text-blue-500 hover:text-blue-700">Work Experience</Button></Link>
         {/* <Button variant="link" onClick={() => router.push('/work')}>Work Experience</Button> */}
       </div>
       <p>
