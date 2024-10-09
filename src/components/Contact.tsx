@@ -45,7 +45,7 @@ const Contact = () => {
             <CardHeader className='pb-1'>
                 <CardTitle className='scroll-m-20 text-md font-extrabold tracking-tight lg:text-3xl flex flex-row justify-between'>
                     <div>Want to hire me?</div>
-                    <a href="https://drive.google.com/uc?export=download&id=1x7hurM0aWEcMQXt-lUexTLtULUMF8MuW"><Button variant='ghost'>Resume <Download className='ml-2 h-4 w-4'/></Button></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1KjjYrnN62W7NNv5wHdQG7P0AtvwHbeqS"><Button variant='ghost'>Resume <Download className='ml-2 h-4 w-4'/></Button></a>
                     </CardTitle>
                 <CardDescription className='scroll-m-20 text-sm'>Drop your message! Let&apos;s discuss.</CardDescription>
             </CardHeader>
