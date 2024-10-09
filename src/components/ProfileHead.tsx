@@ -1,9 +1,9 @@
 "use client"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-// import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Github, Linkedin, Mail } from "lucide-react";
-// import { useTheme } from "next-themes"
-// import { Button } from "./ui/button";
+import { useTheme } from "next-themes"
+import { Button } from "./ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -11,7 +11,15 @@ import { motion } from "framer-motion";
 
 export default function ProfileHead() {
 
-  // const { setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
+  
+  const handleTheme = () => {
+    if(theme == 'light') {
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }
 
   return (
     /* main div */
@@ -23,20 +31,20 @@ export default function ProfileHead() {
         <div>
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback>PS</AvatarFallback>
           </Avatar>
         </div>
-        <h3 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        <h3 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0">
           Prateek Sagar
         </h3>
 
       </div>
-        {/* <div className="">
-          <Button variant="outline">
-        <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" onClick={() => setTheme('light')}/>
-        <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" onClick={() => setTheme('dark')}/>
+        <div className="flex items-center justify-center">
+          <Button variant="outline" className=" flex items-center justify-center" onClick={handleTheme}>
+        <SunIcon className="h-[0.8rem] w-[0.8rem] md:h-[1.2rem] md:w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <MoonIcon className="absolute h-[0.8rem] w-[0.8rem] md:h-[1.2rem] md:w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"/>
         </Button>
-        </div> */}
+        </div>
       </div>
 
       {/* full stack developer */}
