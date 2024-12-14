@@ -6,6 +6,10 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/pageTransition";
 
+import dynamic from "next/dynamic";
+import { useTheme } from "next-themes";
+const Starfield = dynamic(() => import("@/components/StarFeild"), { ssr: false });
+
 export default function Home() {
   return (
     <PageTransition>
@@ -19,6 +23,7 @@ export default function Home() {
         <Footer/>
       </div>
     </div>
+    <Starfield />
     </PageTransition>
   );
 }

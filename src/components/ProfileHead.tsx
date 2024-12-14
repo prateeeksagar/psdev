@@ -92,7 +92,7 @@ const InfiniteCarousel = () => {
   }, [items.length]);
 
   return (
-    <Carousel orientation="horizontal" className="text-lg text-muted-foreground  text-zinc-600 items-start">
+    <Carousel orientation="horizontal" className="text-lg text-muted-foreground  text-zinc-600 dark:text-gray-200 items-start">
       <CarouselContent>
         {items.map((item, index) => (
           <CarouselItem key={index} className={index === currentIndex ? "active" : "hidden"}>
