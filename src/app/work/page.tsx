@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react';
 import PageTransition from '@/components/pageTransition';
+import Starfield from "@/components/StarFeild";
 
 
 export default function Page() {
@@ -32,6 +33,7 @@ export default function Page() {
         <Footer />
       </div>
     </div>
+    <Starfield />
     </PageTransition>
   );
 }
