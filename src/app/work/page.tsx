@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from 'lucide-react';
 import PageTransition from '@/components/pageTransition';
-import Starfield from "@/components/StarFeild";
+import dynamic from "next/dynamic";
+const Starfield = dynamic(() => import("@/components/StarFeild"), { ssr: false });
 
 
 export default function Page() {
