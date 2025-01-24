@@ -80,6 +80,15 @@ export const projectData = [
 
 export const WorkExperience = [
   {
+    company: "Wishtales AI",
+    position: "Full Stack Developer",
+    duration: "October 2023 - Present",
+    description: [
+      "Building web based video editor",
+    ],
+    website: "https://wishtales.ai"
+  },
+  {
     company: "Faircent (Fairassets technologies india pvt. ltd.)",
     position: "Software Developer",
     duration: "July 2023 - October 2024",
