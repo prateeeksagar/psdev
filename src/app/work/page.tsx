@@ -15,7 +15,7 @@ export default function Page() {
     <div className="w-full flex items-center justify-center mt-10">
       <div className="flex flex-col w-4/5 md:w-1/2 h-full justify-center gap-3">
         <div className="flex  items-center justify-between">
-          <Link href="/" className="border hover:bg-slate-100">
+          <Link href="/" className="border rounded ">
           <ArrowLeft/>
           </Link>
           <h3 className="text-2xl">WORK EXPERIENCE</h3>
