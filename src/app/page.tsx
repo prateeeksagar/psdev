@@ -22,7 +22,7 @@ export default function Home() {
         <Footer/>
       </div>
     </div>
-    <Starfield />
+    {/* <Starfield /> */}
     </PageTransition>
   );
 }
