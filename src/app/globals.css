@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -68,8 +69,6 @@
 }
 
 @layer utilities {
-  @plugin "@tailwindcss/typography";
-
   body {
     @apply bg-background font-mono text-foreground antialiased;
     font-synthesis-weight: none;
