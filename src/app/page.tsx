@@ -12,8 +12,8 @@ const Starfield = dynamic(() => import("@/components/StarFeild"), { ssr: false }
 export default function Home() {
   return (
     <PageTransition>
-    <div className="w-full flex items-center justify-center">
-      <div className="flex flex-col w-4/5 md:w-1/2 h-full justify-center gap-3">
+    <div className="w-full flex items-center justify-center py-3">
+      <div className="flex flex-col max-w-3xl overflow-x-hidden px-2 mx-auto h-full justify-center gap-3">
         <ProfileHead/>
         <Summary/>
         <Skills/>

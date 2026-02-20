@@ -29,7 +29,7 @@ export default function ProfileHead() {
       <div className="flex justify-between">
       <div className="flex flex-row gap-2 mt-5">
         {/* <div className="flex justify-between"> */}
-        <div>
+        {/* <div>
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>PS</AvatarFallback>
@@ -37,7 +37,7 @@ export default function ProfileHead() {
         </div>
         <h3 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0">
           Prateek Sagar
-        </h3>
+        </h3> */}
 
       </div>
         <div className="flex items-center justify-center">
@@ -49,9 +49,9 @@ export default function ProfileHead() {
       </div>
 
       {/* full stack developer */}
-      <InfiniteCarousel/>
+      {/* <InfiniteCarousel/> */}
       {/* logos */}
-      <div className="flex space-x-4">
+      {/* <div className="flex space-x-4">
         <a
           href="https://github.com/prateeeksagar"
           target="_blank"
@@ -69,7 +69,7 @@ export default function ProfileHead() {
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prateeksagar2103@gmail.com&su=Opportunity&body=Hi,%20I%20am%20here%20to%20discuss%20regarding%20an%20opportunity." target="_blank">
           <Mail className="h-6 w-6" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

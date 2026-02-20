@@ -15,13 +15,13 @@ const Summary = () => {
   return (
     <div className="flex flex-col">
       <div className="flex gap-2 justify-between">
-        <h2 className="mt-10 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h2 className="mt-10 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight transition-colors first:mt-0 prose">
           Summary
         </h2>
         <Link href={'/work'} ><Button className='text-[10px] md:text-sm border w-22 h-8'>Work Experience</Button></Link>
         {/* <Button variant="link" onClick={() => router.push('/work')}>Work Experience</Button> */}
       </div>
-      <p>
+      <p className="prose">
         I&apos;m a passionate Full-Stack Developer with more than{" "}
         <b>2 years of experience</b> as a working professional. I love crafting
         clean, efficient, and scalable web applications. With a strong

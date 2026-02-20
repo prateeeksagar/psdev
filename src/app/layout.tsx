@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"
+import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts"
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
 import PageTransition from '@/components/pageTransition'
-
-const inter = Inter({ subsets: ["latin"] })
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Prateek Sagar",
@@ -18,9 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en"
+    className={cn(
+      fontMono.variable,
+      fontSans.variable,
+      fontPixelSquare.variable
+    )}
+    suppressHydrationWarning
+    >
       <body
-        className={`${inter.className} bg-slate-50 dark:bg-gray-950 dark:text-gray-300`}
       >
          <ThemeProvider
             attribute="class"
