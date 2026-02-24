@@ -29,10 +29,9 @@ const Skills = () => {
       <h2 className="text-3xl p-2 border-b">Stack</h2>
     <div className="grid grid-flow-col grid-rows-2 gap-4 p-2">
       {SkillsData.map((skill, idx) => (
-        <Tooltip>
+        <Tooltip key={idx}>
           <TooltipTrigger asChild>
             <div
-              key={idx}
               className="w-12 h-12 flex items-center justify-center"
             >
               <img
