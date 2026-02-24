@@ -5,22 +5,20 @@ import { Separator } from "@/components/ui/separator";
 import NameSection from "@/components/portfolio/NameSection";
 import Overview from "@/components/portfolio/Overview";
 import Skills from "@/components/portfolio/Skills";
-
-function MainSeparator() {
-    return (
-        <div className="h-[10px] w-3xl bg-linear-to-r from-zinc-400 via-zinc-600 to-zinc-300  border" />  
-    )
-}
-
+import PatternSeparator from "@/components/ui/pattern-separator";
 
 export default function Home() {
   return (
     <PageTransition>
     <div className="max-w-screen flex items-center justify-center mx-2">
-      <div className="relative flex flex-col max-w-3xl mx-auto h-full justify-center">
-      <MainSeparator/>
+      <div className="border border-y relative flex flex-col max-w-3xl w-3xl mx-auto h-full justify-center">
       <NameSection/>
+
+      <PatternSeparator/>
+
       <Overview/>
+      <PatternSeparator/>
+
       <Skills/>
         <Footer/>
       </div>

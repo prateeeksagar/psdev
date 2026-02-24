@@ -11,7 +11,7 @@ import Link from "next/link"
 
 export default function Overview() {
     return (
-        <section className="p-2 border-x">
+        <section className="p-2">
             <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-2 w-full">
                     <Item className="p-0">
