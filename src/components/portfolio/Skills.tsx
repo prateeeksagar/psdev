@@ -26,7 +26,7 @@ const SkillsData = [
 const Skills = () => {
   return (
     <div className="">
-      <h2 className="text-3xl p-2 border-b">Stack</h2>
+      <h2 className="text-2xl font-semibold p-2 border-b">Stack</h2>
     <div className="grid grid-flow-col grid-rows-2 gap-4 p-2">
       {SkillsData.map((skill, idx) => (
         <Tooltip key={idx}>

@@ -83,14 +83,44 @@ export const WorkExperience = [
     company: "Wishtales AI",
     position: "Full Stack Developer",
     duration: "October 2023 - Present",
+    location: "Gurugram, India",
     description: [
       "Building web based video editor",
     ],
-    website: "https://wishtales.ai"
+    website: "https://wishtales.ai",
+    linkedin: "https://www.linkedin.com/company/wishtales-ai",
+    skills: [
+      {
+        name: "NextJS",
+        logo: "NA"
+      },
+      {
+        name: "Node JS",
+        logo: "NA"
+      },
+      {
+        name: "ReactJS",
+        logo: "NA"
+      },
+      {
+        name: "Shadcn UI",
+        logo: "NA"
+      },
+      {
+        name: "Tailwind CSS",
+        logo: "NA"
+      },
+      {
+        name: "Material UI",
+        logo: "NA"
+      },
+
+    ]
   },
   {
     company: "Faircent (Fairassets technologies india pvt. ltd.)",
     position: "Software Developer",
+    location: "Gurugram, India",
     duration: "July 2023 - October 2024",
     description: [
       "Integrated Faircent with ONDC to provide personalized loans, increasing user loan engagement by 20%.",
@@ -102,17 +132,73 @@ export const WorkExperience = [
       "Led the design and development of Restful API, which facilitated third parties to manage and integrate the system, driving a 25 percent increase in customer engagement and expanding market reach.",
       "Integrated the INCRED APIs and allow faircent to send eligible leads to the INCRED."
     ],
-    website: "https://faircent.com"
+    website: "https://faircent.com",
+    linkedin: "https://www.linkedin.com/company/faircent",
+    skills: [
+      {
+        name: "Node",
+        logo: "NA"
+      },
+      {
+        name: "Postman",
+        logo: "NA"
+      },
+      {
+        name: "MongoDB",
+        logo: "NA"
+      },
+      {
+        name: "MySQL",
+        logo: "NA"
+      },
+      {
+        name: "Microservices",
+        logo: "NA"
+      },
+      {
+        name: "React",
+        logo: "NA"
+      },
+
+    ]
   },
   {
     company: "Faircent  (Fairassets technologies india pvt. ltd.)",
     position: "Software Developer Intern",
+    location: "Gurugram, India",
     duration: "Jan 2023 - June 2023",
     description: [
       "Streamlined payment processes with an automated PDF generator, reducing manual data entry by 15+ hours per week.",
       "Implemented multiple APIs to ensure efficiency, security, and unit testing with complete ownership.",
       "Integrated CCAvenue payment gateway for seamless transactions for 100,000+ users."
     ],
-    website: "https://faircent.com"
+    website: "https://faircent.com",
+    linkedin: "https://www.linkedin.com/company/faircent",
+    skills: [
+      {
+        name: "Node",
+        logo: "NA"
+      },
+      {
+        name: "Postman",
+        logo: "NA"
+      },
+      {
+        name: "MongoDB",
+        logo: "NA"
+      },
+      {
+        name: "MySQL",
+        logo: "NA"
+      },
+      {
+        name: "Microservices",
+        logo: "NA"
+      },
+      {
+        name: "React",
+        logo: "NA"
+      },
+    ]
   },
 ]

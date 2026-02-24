@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "skillicons.dev",
       },
+      {
+        protocol: "https",
+        hostname: "fastly.picsum.photos",
+      },
     ],
   },
 };
