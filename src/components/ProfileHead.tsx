@@ -8,6 +8,7 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Moon, Sun } from "./svg/svg";
+import { cn } from "@/lib/utils";
 
 
 export default function ProfileHead() {
@@ -24,29 +25,28 @@ export default function ProfileHead() {
 
   return (
     /* main div */
-    <div className="flex flex-col">
+    <header className={cn("sticky max-w-screen overflow-x-hidden px-2 pt-2")}>
       {/* name and logo */}
-      <div className="flex justify-between">
+
+      <div className="max-w-3xl mx-auto border flex gap-2 h-12 items-center px-2">
+      <Button size={"icon"}  variant={"secondary"} className=" border flex items-center justify-center" onClick={handleTheme}>
+        {theme == "light" && <Sun />}
+        {theme == "dark" && <Moon/>}
+        </Button>
+      </div>
+
+
+      {/* <div className="flex justify-between">
       <div className="flex flex-row gap-2 mt-5">
-        {/* <div className="flex justify-between"> */}
-        {/* <div>
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>PS</AvatarFallback>
-          </Avatar>
-        </div>
-        <h3 className="scroll-m-20 border-b pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0">
-          Prateek Sagar
-        </h3> */}
 
       </div>
         <div className="flex items-center justify-center">
-          <Button variant="outline" className=" flex items-center justify-center" onClick={handleTheme}>
+          <Button className=" flex items-center justify-center focus-visible:ring-ring hover:ring-ring" onClick={handleTheme}>
         {theme == "light" && <Sun />}
         {theme == "dark" && <Moon/>}
         </Button>
         </div>
-      </div>
+      </div> */}
 
       {/* full stack developer */}
       {/* <InfiniteCarousel/> */}
@@ -70,7 +70,7 @@ export default function ProfileHead() {
           <Mail className="h-6 w-6" />
         </a>
       </div> */}
-    </div>
+    </header>
   );
 }
 

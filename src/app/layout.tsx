@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts"
+// import { fontMono, fontPixelSquare, fontSans } from "@/lib/fonts"
+import { Alata } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/sonner"
-import PageTransition from '@/components/pageTransition'
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+import PageTransition from "@/components/pageTransition";
 import { cn } from "@/lib/utils";
+import { TooltipProvider } from "@/components/ui/tooltip";
+
+const fontSans = Alata({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Prateek Sagar",
@@ -17,27 +25,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"
-    className={cn(
-      fontMono.variable,
-      fontSans.variable,
-      fontPixelSquare.variable
-    )}
-    suppressHydrationWarning
+    <html
+      lang="en"
+      className={
+        cn()
+        // fontSans.variable,
+        // fontMono.variable,
+        // fontPixelSquare.variable
+      }
+      suppressHydrationWarning
     >
-      <body
-      >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <PageTransition>
-          {children}
-          </PageTransition>
+      <body className={`${fontSans.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {" "}
+          <TooltipProvider>
+            <PageTransition>{children}</PageTransition>
+          </TooltipProvider>
           <Toaster />
-          </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

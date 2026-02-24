@@ -1,0 +1,54 @@
+import {
+  Tooltip,
+  TooltipArrow,
+  TooltipContent,
+  TooltipTrigger,
+} from "../ui/tooltip";
+
+const SkillsData = [
+  "nodejs",
+  "react",
+  "express",
+  "aws",
+  "git",
+  "docker",
+  "js",
+  "ts",
+  "linux",
+  "mongodb",
+  "mysql",
+  "nextjs",
+  "postgres",
+  "tailwind",
+  "ubuntu",
+];
+
+const Skills = () => {
+  return (
+    <div className="border grid grid-flow-col grid-rows-2 gap-4 p-2">
+      {SkillsData.map((skill, idx) => (
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <div
+              key={idx}
+              className="w-12 h-12 flex items-center justify-center"
+            >
+              <img
+                src={`https://skillicons.dev/icons?i=${skill}&theme=light`}
+                alt="Emotion"
+                width={70}
+                height={70}
+              />
+            </div>
+          </TooltipTrigger>
+          <TooltipContent className="z-50 fill-popover">
+            {skill.toUpperCase()}
+            <TooltipArrow className="bg-background fill-black" />
+          </TooltipContent>
+        </Tooltip>
+      ))}
+    </div>
+  );
+};
+
+export default Skills;
