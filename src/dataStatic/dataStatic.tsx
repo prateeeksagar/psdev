@@ -83,44 +83,45 @@ export const WorkExperience = [
     company: "Wishtales AI",
     position: "Full Stack Developer",
     duration: "October 2023 - Present",
-    location: "Gurugram, India",
+    location: "Remote",
     description: [
       "Building web based video editor",
     ],
+    logo: "/wishtales_logo.png",
     website: "https://wishtales.ai",
     linkedin: "https://www.linkedin.com/company/wishtales-ai",
     skills: [
       {
         name: "NextJS",
-        logo: "NA"
+        logo: "/nextjs.svg"
       },
       {
         name: "Node JS",
-        logo: "NA"
+        logo: "/nodejs.svg"
       },
       {
         name: "ReactJS",
-        logo: "NA"
+        logo: "/react.svg"
       },
       {
         name: "Shadcn UI",
-        logo: "NA"
+        logo: "/shadcn.png"
       },
       {
         name: "Tailwind CSS",
-        logo: "NA"
+        logo: "/tailwind.svg"
       },
       {
         name: "Material UI",
-        logo: "NA"
-      },
-
+        logo: "material-ui.svg"
+      }
     ]
   },
   {
     company: "Faircent (Fairassets technologies india pvt. ltd.)",
     position: "Software Developer",
     location: "Gurugram, India",
+    logo: "/faircent_logo.png",
     duration: "July 2023 - October 2024",
     description: [
       "Integrated Faircent with ONDC to provide personalized loans, increasing user loan engagement by 20%.",
@@ -137,27 +138,23 @@ export const WorkExperience = [
     skills: [
       {
         name: "Node",
-        logo: "NA"
+        logo: "/nodejs.svg"
       },
       {
         name: "Postman",
-        logo: "NA"
+        logo: "/postman.svg"
       },
       {
         name: "MongoDB",
-        logo: "NA"
+        logo: "mongodb.svg"
       },
       {
         name: "MySQL",
-        logo: "NA"
-      },
-      {
-        name: "Microservices",
-        logo: "NA"
+        logo: "/mysql.svg"
       },
       {
         name: "React",
-        logo: "NA"
+        logo: "/react.svg"
       },
 
     ]
@@ -166,6 +163,7 @@ export const WorkExperience = [
     company: "Faircent  (Fairassets technologies india pvt. ltd.)",
     position: "Software Developer Intern",
     location: "Gurugram, India",
+    logo: "/faircent_logo.png",
     duration: "Jan 2023 - June 2023",
     description: [
       "Streamlined payment processes with an automated PDF generator, reducing manual data entry by 15+ hours per week.",
@@ -177,27 +175,23 @@ export const WorkExperience = [
     skills: [
       {
         name: "Node",
-        logo: "NA"
+        logo: "/nodejs.svg"
       },
       {
         name: "Postman",
-        logo: "NA"
+        logo: "/postman.svg"
       },
       {
         name: "MongoDB",
-        logo: "NA"
+        logo: "/mongodb.svg"
       },
       {
         name: "MySQL",
-        logo: "NA"
-      },
-      {
-        name: "Microservices",
-        logo: "NA"
+        logo: "/mysql.svg"
       },
       {
         name: "React",
-        logo: "NA"
+        logo: "/react.svg"
       },
     ]
   },

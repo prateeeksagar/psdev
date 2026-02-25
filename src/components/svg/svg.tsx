@@ -80,3 +80,11 @@ export const LinkedinIcon = ({ className}: {className?: string}) => {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={cn("lucide lucide-linkedin-icon lucide-linkedin", className)}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
   )
 }
+
+export const DotIcon = ({className, ...props} : {className?: string}) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" className={cn("lucide lucide-dot-icon lucide-dot h-4 w-4 animate-pulse", className)}
+    {...props}
+    ><circle cx="12.1" cy="12.1" r="1"/></svg>
+  )
+}

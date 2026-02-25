@@ -1,4 +1,4 @@
-import { GlobalIcon, LinkedinIcon } from "@/components/svg/svg";
+import {  GlobalIcon, LinkedinIcon } from "@/components/svg/svg";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import React from "react";
@@ -9,6 +9,9 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion";
 import { WorkExperience } from "@/dataStatic/dataStatic";
+import { Badge } from "@/components/ui/badge";
+import { DotIcon } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface Skill {
     name: string, 
@@ -27,6 +30,7 @@ type ExperienceType = {
     description: string[]
     website: string,
     linkedin: string,
+    logo: string,
     skills: Skill[]
 } 
 
@@ -41,7 +45,7 @@ const ExperienceCard = ({data}: any) => {
           <div className="flex flex-row gap-2">
             <Image
               src={
-                "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+                data.logo ? data.logo : "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
               }
               alt="company logo"
               height={50}
@@ -52,13 +56,26 @@ const ExperienceCard = ({data}: any) => {
               <div className="flex flex-row gap-2 items-center justify-center">
                 <h2 className="text-md font-semibold">{data.company}</h2>
                 <div className="flex flex-row gap-1 items-center justify-center">
+                  <Tooltip>
+                    <TooltipTrigger>
                   <a href={data.website}>
                     <GlobalIcon className="h-4 w-4 text-muted-foreground border" />
                   </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    Visit Website
+                  </TooltipContent>
+                  </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
                   <a href={data.linkedin}>
                     <LinkedinIcon className="h-4 w-4 text-muted-foreground border" />
                   </a>
+                  </TooltipTrigger>
+                  <TooltipContent>Connect on linkedin</TooltipContent>
+                  </Tooltip>
                   <AccordionTrigger className="p-0 hover:no-underline"></AccordionTrigger>
+                  {WorkExperience[0].company == data.company && <Badge variant={"outline"} className="flex bg-green-500/20 text-green-600 font-normal tracking-wide rounded-md  items-center justify-center pl-1"><DotIcon className="w-4 h-4 animate-pulse fill-green-600 stroke-8" data-icon="inline-end"/> Currently Working</Badge>}
                 </div>
               </div>
               <p className="text-muted-foreground text-md">
@@ -92,12 +109,19 @@ export default ExperienceCard;
 
 const CardSkills = ({skills}: CardSkillsProps) => {
   return (
-    <div className="flex flex-row gap-2">
+    <div className="flex flex-row gap-2 flex-wrap">
       {skills.map((skill, idx) => (
         <div
           key={idx}
-          className="text-sm font-semibold border text-primary border-zinc-400 border-dotted shadow inset-shadow-sm inset-shadow-zinc-100 p-1 bg-background rounded-lg"
+          className="text-sm font-semibold border text-primary border-zinc-400 border-dotted shadow inset-shadow-sm inset-shadow-zinc-300 p-1 bg-background rounded-lg flex gap-1 px-2 items-center justify-center"
         >
+          <Image
+          src={skill.logo}
+          alt={skill.name}
+          width={50}
+          height={50}
+          className="w-4 h-4"
+          />
           {skill.name.toUpperCase()}
         </div>
       ))}
