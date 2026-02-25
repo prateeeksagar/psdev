@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 // components/PageTransition.tsx
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ReactNode } from "react";
 
 const PageTransition = ({ children }: {children: ReactNode} ) => {

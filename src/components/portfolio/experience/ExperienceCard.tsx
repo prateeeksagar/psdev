@@ -120,7 +120,7 @@ const CardSkills = ({skills}: CardSkillsProps) => {
           alt={skill.name}
           width={50}
           height={50}
-          className="w-4 h-4"
+          className="w-4 h-4 fill-background"
           />
           {skill.name.toUpperCase()}
         </div>
