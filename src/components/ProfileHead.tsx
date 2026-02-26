@@ -19,7 +19,7 @@ export default function ProfileHead() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30)
+      setScrolled(window.scrollY > 10)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -31,7 +31,7 @@ export default function ProfileHead() {
     /* main div */
     <header className={cn("max-w-screen h-full w-full py-2 px-2 sticky top-0 left-0 z-50")}>
       {/* name and logo */}
-      <div className={cn("w-full max-w-3xl mx-auto border  flex gap-2 h-12 items-center px-2", scrolled ? "AppleGlass transition-all transform duration-500 ease-in-out" : "")}>
+      <div className={cn("w-full max-w-3xl mx-auto border  flex gap-2 h-12 items-center px-2", scrolled ? "AppleGlass transition-all transform duration-300 ease-in-out" : "")}>
         <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center " onClick={handleTheme}>
         {theme == "dark" ? <Moon className=""/>
         :<Sun  className=""/>}
