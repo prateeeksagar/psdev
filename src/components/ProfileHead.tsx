@@ -25,10 +25,10 @@ export default function ProfileHead() {
 
   return (
     /* main div */
-    <header className={cn("sticky max-w-screen overflow-x-hidden px-2 pt-2")}>
+    <header className={cn("max-w-screen h-full w-full px-2 py-2")}>
       {/* name and logo */}
 
-      <div className="max-w-3xl mx-auto border flex gap-2 h-12 items-center px-2">
+      <div className="w-full max-w-3xl mx-auto border flex gap-2 h-12 items-center px-2">
       {theme == "light" && <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center" onClick={handleTheme}>
          <Sun />
         </Button>}

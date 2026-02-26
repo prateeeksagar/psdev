@@ -13,7 +13,7 @@ import GithubContribution from "@/components/portfolio/GithubContribution";
 export default function Home() {
   return (
     <PageTransition>
-      <div className="max-w-screen flex items-center justify-center mx-2">
+      <div className="max-w-screen flex items-center justify-center">
         <div className="border border-y relative flex flex-col max-w-3xl mx-auto h-full w-full justify-center">
           <NameSection />
 

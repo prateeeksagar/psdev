@@ -12,6 +12,7 @@ import { WorkExperience } from "@/dataStatic/dataStatic";
 import { Badge } from "@/components/ui/badge";
 import { DotIcon } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import Link from "next/link";
 
 interface Skill {
     name: string, 
@@ -58,9 +59,9 @@ const ExperienceCard = ({data}: any) => {
                 <div className="flex flex-row gap-1 items-center justify-center">
                   <Tooltip>
                     <TooltipTrigger>
-                  <a href={data.website}>
+                  <Link href={data.website} target="_blank">
                     <GlobalIcon className="h-4 w-4 text-muted-foreground border" />
-                  </a>
+                  </Link>
                   </TooltipTrigger>
                   <TooltipContent>
                     Visit Website
@@ -68,9 +69,9 @@ const ExperienceCard = ({data}: any) => {
                   </Tooltip>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                  <a href={data.linkedin}>
+                  <Link href={data.linkedin} target="_blank">
                     <LinkedinIcon className="h-4 w-4 text-muted-foreground border" />
-                  </a>
+                  </Link>
                   </TooltipTrigger>
                   <TooltipContent>Connect on linkedin</TooltipContent>
                   </Tooltip>

@@ -29,8 +29,10 @@ export default function Overview() {
               <ItemTitle className="text-sm md:text-lg">
                 Software developer
                 <Link
-                  href={"https:://www.wishtales.ai"}
+                  href={"https://www.wishtales.ai"}
                   className="hover:underline"
+                  target="_blank"
+                   rel="noopener noreferrer"
                 >
                   @wishtales ai
                 </Link>
@@ -61,7 +63,7 @@ export default function Overview() {
             </ItemMedia>
             <ItemContent>
               <ItemTitle className="text-sm md:text-lg">
-                <Link href={"https://psdev-ten.vercel.app/"}>
+                <Link href={"https://psdev-ten.vercel.app/"} target="_blank" className="hover:underline">
                   prateeksagar.com
                 </Link>
               </ItemTitle>
@@ -89,7 +91,7 @@ export default function Overview() {
             <LinkedinIcon className="" />
             </ItemMedia>
             <ItemContent>
-            <Link href={"https://www.linkedin.com/in/prateek-sagar/"}>  <ItemTitle className="text-sm md:text-lg hover:underline">Linkedin</ItemTitle></Link>
+            <Link href={"https://www.linkedin.com/in/prateek-sagar/"} target="_blank">  <ItemTitle className="text-sm md:text-lg hover:underline">Linkedin</ItemTitle></Link>
             </ItemContent>
           </Item>
 
@@ -98,7 +100,7 @@ export default function Overview() {
               <GithubIcon className="" />
             </ItemMedia>
             <ItemContent>
-            <Link href={"https://github.com/prateeeksagar"}><ItemTitle className="text-sm md:text-lg hover:underline">Github</ItemTitle></Link>
+            <Link href={"https://github.com/prateeeksagar"} target="_blank"><ItemTitle className="text-sm md:text-lg hover:underline">Github</ItemTitle></Link>
             </ItemContent>
           </Item>
         </div>
