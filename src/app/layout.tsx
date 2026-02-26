@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import PageTransition from "@/components/pageTransition";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Script from "next/script";
 
 const fontSans = Alata({
   subsets: ["latin"],
@@ -49,6 +50,8 @@ export default function RootLayout({
           </TooltipProvider>
           <Toaster />
         </ThemeProvider>
+        {/* <OnekoLoader/> */}
+        <Script src="oneko/oneko.js" strategy="afterInteractive" />
       </body>
     </html>
   );
