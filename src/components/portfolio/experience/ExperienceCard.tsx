@@ -41,7 +41,7 @@ const ExperienceCard = ({data}: any) => {
       <Accordion defaultValue={WorkExperience[0].company} type="single" collapsible>
       <AccordionItem value={data.company} className="border-none">
       <CardHeader className="p-0">
-        <div className="flex flex-row justify-between p-2 w-full">
+        <div className="flex flex-col md:flex-row justify-between p-2 w-full">
           <div className="flex flex-row gap-2">
             <Image
               src={
@@ -84,10 +84,10 @@ const ExperienceCard = ({data}: any) => {
             </div>
           </div>
           <div className="flex flex-col">
-            <h2 className="text-sm font-medium text-muted-foreground text-right">
+            <h2 className="text-sm font-medium text-muted-foreground md:text-right">
               {data.duration}
             </h2>
-            <h2 className="text-sm font-medium text-muted-foreground text-right">
+            <h2 className="text-sm font-medium text-muted-foreground md:text-right">
               {data.location}
             </h2>
           </div>

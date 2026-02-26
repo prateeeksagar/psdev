@@ -1,6 +1,7 @@
 import { WorkExperience } from "@/dataStatic/dataStatic";
 import ExperienceCard from "./ExperienceCard";
 
+
 const Experience = () => {
   return (
     <div className="">
@@ -8,6 +9,7 @@ const Experience = () => {
       <div className="">
         {WorkExperience.map((exp,idx) => (<div key={idx} className=""><ExperienceCard data={exp}/></div>))}
         </div>
+
     </div>
   )
 }

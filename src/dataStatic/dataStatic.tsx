@@ -85,7 +85,9 @@ export const WorkExperience = [
     duration: "October 2023 - Present",
     location: "Remote",
     description: [
-      "Building web based video editor",
+      "Developing UI of a platform on which user can generate AI videos",
+      "Developed web based video editor with AI Integration",
+      "Developed AI generated video streaming platform",
     ],
     logo: "/wishtales_logo.png",
     website: "https://wishtales.ai",

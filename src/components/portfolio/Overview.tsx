@@ -11,6 +11,8 @@ import {
   LinkIcon,
   MailIcon,
   MarsIcon,
+  LinkedinIcon,
+  GithubIcon,
 } from "../svg/svg";
 import Link from "next/link";
 
@@ -24,7 +26,7 @@ export default function Overview() {
               <CodeIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">
                 Software developer
                 <Link
                   href={"https:://www.wishtales.ai"}
@@ -40,17 +42,17 @@ export default function Overview() {
               <MapPinIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle>Delhi, India</ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">Delhi, India</ItemTitle>
             </ItemContent>
           </Item>
         </div>
-        <div className="grid grid-cols-2 gap-2 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
           <Item className="p-0">
             <ItemMedia variant="icon" className="border-4 border-double">
               <CallIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle>+91 7827445441</ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">+91 7827445441</ItemTitle>
             </ItemContent>
           </Item>
           <Item className="p-0">
@@ -58,7 +60,7 @@ export default function Overview() {
               <LinkIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">
                 <Link href={"https://psdev-ten.vercel.app/"}>
                   prateeksagar.com
                 </Link>
@@ -70,7 +72,7 @@ export default function Overview() {
               <MailIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle>prateeksagar2103@gmail.com</ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">prateeksagar2103@gmail.com</ItemTitle>
             </ItemContent>
           </Item>
           <Item className="p-0">
@@ -78,7 +80,25 @@ export default function Overview() {
               <MarsIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle>he/him</ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">he/him</ItemTitle>
+            </ItemContent>
+          </Item>
+
+          <Item className="p-0">
+            <ItemMedia variant="icon" className="border-4 border-double">
+            <LinkedinIcon className="" />
+            </ItemMedia>
+            <ItemContent>
+            <Link href={"https://www.linkedin.com/in/prateek-sagar/"}>  <ItemTitle className="text-sm md:text-lg hover:underline">Linkedin</ItemTitle></Link>
+            </ItemContent>
+          </Item>
+
+          <Item className="p-0">
+            <ItemMedia variant="icon" className="border-4 border-double">
+              <GithubIcon className="" />
+            </ItemMedia>
+            <ItemContent>
+            <Link href={"https://github.com/prateeeksagar"}><ItemTitle className="text-sm md:text-lg hover:underline">Github</ItemTitle></Link>
             </ItemContent>
           </Item>
         </div>

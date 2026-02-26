@@ -27,7 +27,7 @@ const Skills = () => {
   return (
     <div className="">
       <h2 className="text-2xl font-semibold p-2 border-b">Stack</h2>
-    <div className="grid grid-flow-col grid-rows-2 gap-4 p-2">
+    <div className="grid grid-flow-col grid-rows-3 md:grid-rows-2 gap-4 p-2">
       {SkillsData.map((skill, idx) => (
         <Tooltip key={idx}>
           <TooltipTrigger asChild>
@@ -37,8 +37,9 @@ const Skills = () => {
               <img
                 src={`https://skillicons.dev/icons?i=${skill}&theme=light`}
                 alt="Emotion"
-                width={70}
-                height={70}
+                // width={70}
+                // height={70}
+                className="w-10 h-10 md:w-15 md:h-15"
               />
             </div>
           </TooltipTrigger>

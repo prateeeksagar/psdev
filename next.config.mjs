@@ -16,6 +16,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "fastly.picsum.photos",
       },
+      {
+        protocol: "https",
+        hostname: "github-readme-stats.vercel.app",
+      },
     ],
   },
 };
