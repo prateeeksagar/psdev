@@ -1,12 +1,6 @@
 "use client"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes"
 import { Button } from "./ui/button";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
 import { Moon, Sun } from "./svg/svg";
 import { cn } from "@/lib/utils";
 
@@ -25,16 +19,16 @@ export default function ProfileHead() {
 
   return (
     /* main div */
-    <header className={cn("max-w-screen h-full w-full px-2 py-2")}>
+    <header className={cn("max-w-screen h-full w-full py-2 px-2")}>
       {/* name and logo */}
 
-      <div className="w-full max-w-3xl mx-auto border flex gap-2 h-12 items-center px-2">
-      {theme == "light" && <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center" onClick={handleTheme}>
-         <Sun />
-        </Button>}
-        {theme == "dark" && <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center" onClick={handleTheme}>
+      <div className="w-full  max-w-3xl mx-auto border flex gap-2 h-12 items-center px-2">
+      <Button size={"icon"}  suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center opacity-100 dark:opacity-0 " onClick={handleTheme}>
+        <Sun />
+        </Button>
+        <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center opacity-0 dark:opacity-100" onClick={handleTheme}>
         <Moon/>
-        </Button>}
+        </Button>
       </div>
 
 

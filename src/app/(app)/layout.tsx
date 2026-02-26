@@ -5,7 +5,7 @@ export default function AppLayout({children}: {children: React.ReactNode}) {
     return (
         <>
         <ProfileHead/>
-        <main className="max-w-screen">{children}</main>
+        <main className="max-w-screen px-2">{children}</main>
         <Footer/>
         </>
     )

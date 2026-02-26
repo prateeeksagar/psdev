@@ -45,6 +45,7 @@ export default function RootLayout({
           {" "}
           <TooltipProvider>
             <PageTransition>{children}</PageTransition>
+            {/* {children} */}
           </TooltipProvider>
           <Toaster />
         </ThemeProvider>

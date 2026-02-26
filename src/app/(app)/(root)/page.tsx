@@ -5,10 +5,12 @@ import Overview from "@/components/portfolio/Overview";
 import Skills from "@/components/portfolio/Skills";
 import PatternSeparator from "@/components/ui/pattern-separator";
 import Experience from "@/components/portfolio/experience/Experience";
-import { GitHubCalendar } from "react-github-calendar";
-import { useTheme } from "next-themes";
-import GithubContribution from "@/components/portfolio/GithubContribution";
+import dynamic from "next/dynamic";
 
+const GithubContribution = dynamic(
+  () => import("@/components/portfolio/GithubContribution"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
