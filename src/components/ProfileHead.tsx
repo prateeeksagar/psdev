@@ -23,11 +23,12 @@ export default function ProfileHead() {
       {/* name and logo */}
 
       <div className="w-full  max-w-3xl mx-auto border flex gap-2 h-12 items-center px-2">
-      <Button size={"icon"}  suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center opacity-100 dark:opacity-0 " onClick={handleTheme}>
+      {/* <Button size={"icon"}  suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center opacity-100 dark:opacity-0 " onClick={handleTheme}>
         <Sun />
-        </Button>
-        <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center opacity-0 dark:opacity-100" onClick={handleTheme}>
-        <Moon/>
+        </Button> */}
+        <Button size={"icon"} suppressHydrationWarning  variant={"secondary"} className=" border flex items-center justify-center " onClick={handleTheme}>
+        {theme == "dark" ? <Moon className=""/>
+        :<Sun  className=""/>}
         </Button>
       </div>
 

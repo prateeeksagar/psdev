@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { motion, scale } from "motion/react";
 
-export const Sun = () => {
+export const Sun = ({className}: {className?:string}) => {
   return (
     <motion.svg
       initial={{ scale: 0 }}
@@ -16,7 +16,7 @@ export const Sun = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-sun-medium-icon lucide-sun-medium h-[0.8rem] w-[0.8rem] md:h-[1.2rem] md:w-[1.2rem] dark:scale-0"
+      className={cn("lucide lucide-sun-medium-icon lucide-sun-medium h-[0.8rem] w-[0.8rem] md:h-[1.2rem] md:w-[1.2rem] dark:scale-0", className)}
     >
       <circle cx="12" cy="12" r="4" />
       <motion.path
@@ -63,7 +63,7 @@ export const Sun = () => {
   );
 };
 
-export const Moon = () => {
+export const Moon = ({className}: {className: string}) => {
   return (
     <motion.svg
       initial={{ scale: 0.8 }}
@@ -80,7 +80,7 @@ export const Moon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-moon-icon lucide-moon-medium h-[0.8rem] w-[0.8rem] md:h-[1.2rem] md:w-[1.2rem]"
+      className={cn("lucide lucide-moon-icon lucide-moon-medium h-[0.8rem] w-[0.8rem] md:h-[1.2rem] md:w-[1.2rem]", className)}
     >
       <motion.path
         initial={{ rotate: 0 }}
