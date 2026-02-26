@@ -41,7 +41,6 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
         >
           {" "}
           <TooltipProvider>
@@ -50,7 +49,6 @@ export default function RootLayout({
           </TooltipProvider>
           <Toaster />
         </ThemeProvider>
-        {/* <OnekoLoader/> */}
         <Script src="oneko/oneko.js" strategy="afterInteractive" />
       </body>
     </html>

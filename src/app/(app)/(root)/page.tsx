@@ -14,7 +14,7 @@ const GithubContribution = dynamic(
 
 export default function Home() {
   return (
-    <PageTransition>
+    // <PageTransition>
       <div className="max-w-screen flex items-center justify-center">
         <div className="border border-y relative flex flex-col max-w-3xl mx-auto h-full w-full justify-center">
           <NameSection />
@@ -35,6 +35,6 @@ export default function Home() {
           {/* <Footer /> */}
         </div>
       </div>
-    </PageTransition>
+    // </PageTransition>
   );
 }
