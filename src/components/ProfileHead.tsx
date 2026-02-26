@@ -3,6 +3,7 @@ import { useTheme } from "next-themes"
 import { Button } from "./ui/button";
 import { Moon, Sun } from "./svg/svg";
 import { cn } from "@/lib/utils";
+import Starfield from "./StarFeild";
 
 
 export default function ProfileHead() {

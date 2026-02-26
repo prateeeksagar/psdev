@@ -82,7 +82,7 @@ export const WorkExperience = [
   {
     company: "Wishtales AI",
     position: "Full Stack Developer",
-    duration: "October 2023 - Present",
+    duration: "October 2024 - Present",
     location: "Remote",
     description: [
       "Developing UI of a platform on which user can generate AI videos",

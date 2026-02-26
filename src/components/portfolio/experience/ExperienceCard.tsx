@@ -13,6 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { DotIcon } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Link from "next/link";
+import PageTransition from "@/components/pageTransition";
 
 interface Skill {
     name: string, 
