@@ -63,7 +63,7 @@ export default function Overview() {
             </ItemMedia>
             <ItemContent>
               <ItemTitle className="text-sm md:text-lg">
-                <Link href={"https://psdev-ten.vercel.app/"} target="_blank" className="hover:underline">
+                <Link href={"https://prateeksagar.com/"} target="_blank" className="hover:underline">
                   prateeksagar.com
                 </Link>
               </ItemTitle>
@@ -74,7 +74,7 @@ export default function Overview() {
               <MailIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle className="text-sm md:text-lg">prateeksagar2103@gmail.com</ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">hi@prateeksagar.com</ItemTitle>
             </ItemContent>
           </Item>
           <Item className="p-0">
