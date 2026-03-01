@@ -63,7 +63,7 @@ export default function Overview() {
             </ItemMedia>
             <ItemContent>
               <ItemTitle className="text-sm md:text-lg">
-                <Link href={"https://prateeksagar.com/"} target="_blank" className="hover:underline">
+                <Link href={"https://www.prateeksagar.com/"} target="_blank" className="hover:underline">
                   prateeksagar.com
                 </Link>
               </ItemTitle>
