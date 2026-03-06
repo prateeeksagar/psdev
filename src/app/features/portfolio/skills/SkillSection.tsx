@@ -90,12 +90,12 @@ const SkillSection = () => {
   const [showDetailedSkills, setShowDetailedSkills] = useState(false);
 
   return (
-    <section className="">
+    <section className="" id="skills">
       <h2 className="text-2xl font-semibold p-2 border-b">Skills</h2>
       <Collapsible open={showDetailedSkills} onOpenChange={setShowDetailedSkills}>
         <CollapsibleTrigger className="flex items-center justify-center w-full py-2 hover:text-muted-foreground">{showDetailedSkills ?
           <ChevronsUp className="animate-bounce text-muted-foreground" /> : <ChevronsDown className="animate-bounce text-muted-foreground" />}</CollapsibleTrigger>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           {!showDetailedSkills ? <motion.div initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }} transition={{ duration: 0.3 }} className="flex flex-row gap-4 flex-wrap p-2">
             {SKILLS_LIST.map((skill: SkillListProps, idx) => (
@@ -117,8 +117,10 @@ const SkillSection = () => {
             ))}
           </motion.div> : null}
           <CollapsibleContent>
-            <motion.div initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }} transition={{ duration: 0.3 }} className="space-y-2">
+            <motion.div initial={{ opacity: 0 }}
+animate={{ opacity: 1 }}
+exit={{ opacity: 0 }}
+transition={{ duration: 0.5 }} className="space-y-2">
               <SkillCategory title="Frontend" skills={FRONTEND_SKILLS_LIST} />
               <SkillCategory title="Backend" skills={BACKEND_SKILLS_LIST} />
               <SkillCategory title="Dev Tools" skills={DEV_TOOLS} />

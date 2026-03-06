@@ -14,10 +14,11 @@ import { DotIcon } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Link from "next/link";
 import PageTransition from "@/components/pageTransition";
+import SkillBadge from "../skills/components/SkillBadge";
 
 interface Skill {
     name: string, 
-    logo: string
+    image: string
 }
 
 interface CardSkillsProps {
@@ -116,19 +117,7 @@ const CardSkills = ({skills}: CardSkillsProps) => {
   return (
     <div className="flex flex-row gap-2 flex-wrap">
       {skills.map((skill, idx) => (
-        <div
-          key={idx}
-          className="text-sm font-semibold border text-primary border-zinc-400 border-dotted shadow inset-shadow-sm inset-shadow-zinc-300 p-1 bg-background rounded-lg flex gap-1 px-2 items-center justify-center"
-        >
-          <Image
-          src={skill.logo}
-          alt={skill.name}
-          width={50}
-          height={50}
-          className="w-4 h-4 fill-background"
-          />
-          {skill.name.toUpperCase()}
-        </div>
+        <SkillBadge skill={skill} key={idx}/>
       ))}
     </div>
   );
