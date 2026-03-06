@@ -3,7 +3,7 @@ import {
   ItemContent,
   ItemMedia,
   ItemTitle,
-} from "../ui/item";
+} from "../../../components/ui/item";
 import {
   CodeIcon,
   MapPinIcon,
@@ -13,7 +13,7 @@ import {
   MarsIcon,
   LinkedinIcon,
   GithubIcon,
-} from "../svg/svg";
+} from "../../../components/svg/svg";
 import Link from "next/link";
 
 export default function Overview() {
@@ -74,7 +74,7 @@ export default function Overview() {
               <MailIcon />
             </ItemMedia>
             <ItemContent>
-              <ItemTitle className="text-sm md:text-lg">hi@prateeksagar.com</ItemTitle>
+              <ItemTitle className="text-sm md:text-lg">prateeksagar2103@gmail.com</ItemTitle>
             </ItemContent>
           </Item>
           <Item className="p-0">

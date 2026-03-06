@@ -1,14 +1,14 @@
 "use client";
 import PageTransition from "@/components/pageTransition";
-import NameSection from "@/components/portfolio/NameSection";
-import Overview from "@/components/portfolio/Overview";
-import Skills from "@/components/portfolio/Skills";
+import NameSection from "@/app/features/portfolio/NameSection";
+import Overview from "@/app/features/portfolio/Overview";
 import PatternSeparator from "@/components/ui/pattern-separator";
-import Experience from "@/components/portfolio/experience/Experience";
+import Experience from "@/app/features/portfolio/experience/Experience";
 import dynamic from "next/dynamic";
+import SkillSection from "@/app/features/portfolio/skills/SkillSection";
 
 const GithubContribution = dynamic(
-  () => import("@/components/portfolio/GithubContribution"),
+  () => import("@/app/features/portfolio/GithubContribution"),
   { ssr: false }
 );
 
@@ -24,7 +24,7 @@ export default function Home() {
           <Overview />
           <PatternSeparator />
 
-          <Skills />
+          <SkillSection />
           <PatternSeparator />
 
           <Experience/>

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "../../../components/ui/carousel";
 import { AnimatePresence, motion } from "motion/react";
 export const InfiniteCarousel = () => {
   const items = [
