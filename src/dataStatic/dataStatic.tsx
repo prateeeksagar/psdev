@@ -95,23 +95,23 @@ export const WorkExperience = [
     skills: [
       {
         name: "NextJS",
-        image: "/nextjs.svg"
+        image: "nextjs.svg"
       },
       {
         name: "Node JS",
-        image: "/nodejs.svg"
+        image: "nodejs.svg"
       },
       {
         name: "ReactJS",
-        image: "/react.svg"
+        image: "react.svg"
       },
       {
         name: "Shadcn UI",
-        image: "/shadcn.png"
+        image: "shadcn.svg"
       },
       {
         name: "Tailwind CSS",
-        image: "/tailwind.svg"
+        image: "tailwind.svg"
       },
       {
         name: "Material UI",
@@ -140,11 +140,11 @@ export const WorkExperience = [
     skills: [
       {
         name: "Node",
-        image: "/nodejs.svg"
+        image: "nodejs.svg"
       },
       {
         name: "Postman",
-        image: "/postman.svg"
+        image: "postman.svg"
       },
       {
         name: "MongoDB",
@@ -152,11 +152,11 @@ export const WorkExperience = [
       },
       {
         name: "MySQL",
-        image: "/mysql.svg"
+        image: "mysql.svg"
       },
       {
         name: "React",
-        image: "/react.svg"
+        image: "react.svg"
       },
 
     ]
@@ -177,23 +177,23 @@ export const WorkExperience = [
     skills: [
       {
         name: "Node",
-        image: "/nodejs.svg"
+        image: "nodejs.svg"
       },
       {
         name: "Postman",
-        image: "/postman.svg"
+        image: "postman.svg"
       },
       {
         name: "MongoDB",
-        image: "/mongodb.svg"
+        image: "mongodb.svg"
       },
       {
         name: "MySQL",
-        image: "/mysql.svg"
+        image: "mysql.svg"
       },
       {
         name: "React",
-        image: "/react.svg"
+        image: "react.svg"
       },
     ]
   },
