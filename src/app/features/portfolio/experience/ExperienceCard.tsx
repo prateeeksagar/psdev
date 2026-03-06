@@ -13,7 +13,6 @@ import { Badge } from "@/components/ui/badge";
 import { DotIcon } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Link from "next/link";
-import PageTransition from "@/components/pageTransition";
 import SkillBadge from "../skills/components/SkillBadge";
 
 interface Skill {
@@ -61,7 +60,7 @@ const ExperienceCard = ({data}: any) => {
                 <h2 className="text-md font-semibold">{data.company}</h2>
                 <div className="flex flex-row gap-1 items-center justify-center">
                   <Tooltip>
-                    <TooltipTrigger>
+                    <TooltipTrigger asChild>
                   <Link href={data.website} target="_blank">
                     <GlobalIcon className="h-4 w-4 text-muted-foreground border" />
                   </Link>
@@ -70,6 +69,7 @@ const ExperienceCard = ({data}: any) => {
                     Visit Website
                   </TooltipContent>
                   </Tooltip>
+
                   <Tooltip>
                     <TooltipTrigger asChild>
                   <Link href={data.linkedin} target="_blank">
@@ -78,6 +78,7 @@ const ExperienceCard = ({data}: any) => {
                   </TooltipTrigger>
                   <TooltipContent>Connect on linkedin</TooltipContent>
                   </Tooltip>
+
                   <AccordionTrigger className="p-0 hover:no-underline"></AccordionTrigger>
                   {WorkExperience[0].company == data.company && <Badge variant={"outline"} className="flex bg-green-500/20 text-green-600 font-normal tracking-wide rounded-md  items-center justify-center pl-1"><DotIcon className="w-4 h-4 animate-pulse fill-green-600 stroke-8" data-icon="inline-end"/> Currently Working</Badge>}
                 </div>

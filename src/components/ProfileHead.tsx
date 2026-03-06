@@ -38,42 +38,6 @@ export default function ProfileHead() {
         </Button>
       {/* </div> */}
       </div>
-
-
-      {/* <div className="flex justify-between">
-      <div className="flex flex-row gap-2 mt-5">
-
-      </div>
-        <div className="flex items-center justify-center">
-          <Button className=" flex items-center justify-center focus-visible:ring-ring hover:ring-ring" onClick={handleTheme}>
-        {theme == "light" && <Sun />}
-        {theme == "dark" && <Moon/>}
-        </Button>
-        </div>
-      </div> */}
-
-      {/* full stack developer */}
-      {/* <InfiniteCarousel/> */}
-      {/* logos */}
-      {/* <div className="flex space-x-4">
-        <a
-          href="https://github.com/prateeeksagar"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Github className="h-6 w-6" />
-        </a>
-        <a
-          href="https://linkedin.com/in/prateek-sagar"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Linkedin className="h-6 w-6" />
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prateeksagar2103@gmail.com&su=Opportunity&body=Hi,%20I%20am%20here%20to%20discuss%20regarding%20an%20opportunity." target="_blank">
-          <Mail className="h-6 w-6" />
-        </a>
-      </div> */}
     </header>
   );
 }
