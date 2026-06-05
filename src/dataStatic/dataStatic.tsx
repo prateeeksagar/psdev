@@ -85,7 +85,7 @@ export const WorkExperience = [
     duration: "October 2024 - Present",
     location: "Remote",
     description: [
-      "Developed an AI-powered web video editor using Next.js, Tailwind CSS, and Mobx and FabricJS.<a href='www.wishtales.ai/supercut'>'(supercut)'</a>",
+      "Developed an AI-powered web video editor (supercut) using Next.js, Tailwind CSS, and Mobx and FabricJS.",
       "Collaborated with the design teams to implement an intuitive, responsive, and visually engaging UI using NEXT.js, Material UI, Tailwind CSS and modern web development practices.",
       "Built multilingual video dubbing feature enabling users to dub videos in multiple languages",
       "Frontend Development of AI generated video streaming named stream",
