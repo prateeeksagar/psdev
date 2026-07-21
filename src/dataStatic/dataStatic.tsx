@@ -6,6 +6,37 @@ export type WorkExperieceType = {
   website: string
 }
 
+export type TechChip = {
+  name: string;
+  image: string;
+}
+
+export type MainProject = {
+  title: string;
+  description: string;
+  longDescription: string;
+  techStack: TechChip[];
+  githubLink?: string;
+  liveLink?: string;
+  status: "active" | "beta" | "completed";
+}
+
+export type FreelanceProject = {
+  title: string;
+  description: string;
+  url: string;
+  image?: string; // Add your screenshot path here e.g. "/hatchpros-screenshot.png"
+  techStack: TechChip[];
+}
+
+export type OtherProject = {
+  title: string;
+  description: string;
+  techStack: string[];
+  githubLink?: string;
+  liveLink?: string;
+}
+
 
 export const techStack = [
     {
@@ -76,6 +107,86 @@ export const projectData = [
     githubLink: "http://github.com/prateeeksagar/medium-project",
     liveLink: ""
   }
+]
+
+export const mainProjects: MainProject[] = [
+  {
+    title: "Excileboard",
+    description: "A modern whiteboard built for designs",
+    longDescription:
+      "Excileboard is a whiteboard platform. Built with a focus on performance and seamless user experience.",
+    techStack: [
+      // { name: "Next.js", image: "nextjs.svg" },
+      { name: "React", image: "react.svg" },
+      { name: "TypeScript", image: "typescript.svg" },
+      // { name: "Node.js", image: "nodejs.svg" },
+      // { name: "MongoDB", image: "mongodb.svg" },
+      { name: "Tailwind", image: "tailwind.svg" },
+      { name: "MobX", image: "mobx.svg"},
+      { name: "FabricJS", image: "fabricjs.svg"},
+      { name: "shadcn", image: "light-shadcn.svg"}
+    ],
+    githubLink: "https://github.com/prateeeksagar/excileboard",
+    liveLink: "https://excileboard.vercel.app/",
+    status: "active",
+  },
+]
+
+export const freelanceProjects: FreelanceProject[] = [
+  {
+    title: "HatchPros",
+    description:
+      "A professional services platform connecting skilled contractors with clients. Designed and built a full-stack web experience with a seamless onboarding flow.",
+    url: "https://hatchpros.net/",
+    image: "/hatchpros.png",  // ← add your screenshot here
+    techStack: [
+      { name: "React", image: "react.svg" },
+      { name: "Node.js", image: "nodejs.svg" },
+      { name: "Tailwind", image: "tailwind.svg" },
+    ],
+  },
+  {
+    title: "Darpan Designs",
+    description:
+      "Portfolio & studio website for a creative design agency. Crafted a visually rich, responsive site that highlights their brand identity and project showcase.",
+    url: "https://www.darpandesigns.com/",
+    image: "/darpandesigns.png",  // ← add your screenshot here
+    techStack: [
+      { name: "Next.js", image: "nextjs.svg" },
+      { name: "Tailwind", image: "tailwind.svg" },
+    ],
+  },
+]
+
+export const otherProjects: OtherProject[] = [
+  {
+    title: "ps-icons",
+    description:
+      "Animated SVG icon library ready to drop into any project. Import via CLI like shadcn — built with Motion, Lucide icons, React, and Tailwind CSS.",
+    techStack: ["React", "Motion", "Lucide", "Tailwind CSS", "CLI"],
+    githubLink: "https://github.com/prateeeksagar/ps-icons"
+  },
+  {
+    title: "ShortURL",
+    description:
+      "A URL shortener service with analytics. Clean REST API backend for creating and resolving short links.",
+    techStack: ["Node.js", "MongoDB", "Express"],
+    githubLink: "https://github.com/prateeeksagar/short-URL",
+  },
+  {
+    title: "Flight Reservation System",
+    description:
+      "Microservice architecture for searching and reserving flights. Designed for scalability with separate service boundaries.",
+    techStack: ["Node.js", "Microservices", "Prisma", "MySQL"],
+    githubLink: "https://github.com/prateeeksagar/FlightsandSearchService",
+  },
+  {
+    title: "Lender System",
+    description:
+      "A peer-to-peer lending platform with dedicated frontend and backend. Handles loan requests, lender matching, and fund tracking.",
+    techStack: ["React", "Node.js", "P2P Lending"],
+    githubLink: "https://github.com/prateeeksagar/LenderSystemFrontend",
+  },
 ]
 
 export const WorkExperience = [

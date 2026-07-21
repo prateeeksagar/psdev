@@ -6,6 +6,7 @@ import PatternSeparator from "@/components/ui/pattern-separator";
 import Experience from "@/app/features/portfolio/experience/Experience";
 import dynamic from "next/dynamic";
 import SkillSection from "@/app/features/portfolio/skills/SkillSection";
+import Projects from "@/app/features/portfolio/projects/Projects";
 
 const GithubContribution = dynamic(
   () => import("@/app/features/portfolio/GithubContribution"),
@@ -28,6 +29,9 @@ export default function Home() {
           <PatternSeparator />
 
           <Experience/>
+          <PatternSeparator/>
+
+          <Projects/>
           <PatternSeparator/>
 
           <GithubContribution/>
