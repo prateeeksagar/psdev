@@ -36,7 +36,9 @@ const MainProjectCard = ({ project, index }: Props) => {
       <div className="flex items-start justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
           <Zap className="w-4 h-4 text-muted-foreground shrink-0" />
-          <h3 className="text-lg font-semibold leading-tight">{project.title}</h3>
+          <Link href={`/projects/${project.slug}`}>
+            <h3 className="text-lg font-semibold leading-tight hover:underline">{project.title}</h3>
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 shrink-0">

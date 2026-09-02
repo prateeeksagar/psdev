@@ -10,6 +10,38 @@ import {
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
+const renderFormattedText = (text: string) => {
+  const parts = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const [_, label, url] = match;
+    parts.push(
+      <Link
+        key={match.index}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 text-foreground hover:text-primary font-medium transition-colors"
+      >
+        {label}
+      </Link>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+};
+
 const WorkCard = ({
   company,
   position,
@@ -42,7 +74,7 @@ const WorkCard = ({
         <ul className="list-disc pl-5 space-y-1">
           {description.map((point, idx) => (
             <li key={idx} className="text-sm text-muted-foreground">
-              {point}
+              {renderFormattedText(point)}
             </li>
           ))}
         </ul>

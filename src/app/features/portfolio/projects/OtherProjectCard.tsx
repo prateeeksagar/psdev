@@ -22,7 +22,9 @@ const OtherProjectCard = ({ project, index }: Props) => {
     >
       {/* Title + links */}
       <div className="flex items-center justify-between gap-1">
-        <h3 className="text-sm font-semibold truncate">{project.title}</h3>
+        <Link href={`/projects/${project.slug}`}>
+          <h3 className="text-sm font-semibold truncate hover:underline">{project.title}</h3>
+        </Link>
         <div className="flex items-center gap-1.5 shrink-0">
           {project.githubLink && (
             <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">

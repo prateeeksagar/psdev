@@ -12,13 +12,15 @@ const SkillBadge = ({ skill }: SkillBadgeProps) => {
         <div
             className="text-sm font-semibold border border-border text-primary shadow-md inset-shadow-lg text-shadow-2xs p-1 bg-accent rounded-lg flex gap-1 px-2 items-center justify-center"
         >
-            <Image
-                src={theme == "light" ? `/light-${skill.image}` : `/dark-${skill.image}`}
-                alt={skill.name}
-                width={50}
-                height={50}
-                className="w-4 h-4 fill-background"
-            />
+            {skill.image && (
+                <Image
+                    src={theme == "light" ? `/light-${skill.image}` : `/dark-${skill.image}`}
+                    alt={skill.name}
+                    width={50}
+                    height={50}
+                    className="w-4 h-4 fill-background"
+                />
+            )}
             {skill.name.toUpperCase()}
         </div>
     )

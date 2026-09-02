@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="800px" height="800px" fill="none">
+<circle cx="128" cy="128" r="120" fill="#A78BFA" fill-opacity="0.2"/>
+<path d="M72 108C72 90.3 86.3 76 104 76h48c17.7 0 32 14.3 32 32v40c0 17.7-14.3 32-32 32h-48c-17.7 0-32-14.3-32-32v-40z" stroke="#A78BFA" stroke-width="16"/>
+<path d="M56 84c-12-16-28-20-40-20 4 20 16 32 32 36M200 84c12-16 28-20 40-20-4 20-16 32-32 36" stroke="#A78BFA" stroke-width="16" stroke-linecap="round"/>
+<circle cx="106" cy="120" r="10" fill="#A78BFA"/>
+<circle cx="150" cy="120" r="10" fill="#A78BFA"/>
+</svg>

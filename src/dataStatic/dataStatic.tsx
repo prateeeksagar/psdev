@@ -13,25 +13,21 @@ export type TechChip = {
 
 export type MainProject = {
   title: string;
+  slug: string;
   description: string;
   longDescription: string;
+  details: string[];
   techStack: TechChip[];
   githubLink?: string;
   liveLink?: string;
   status: "active" | "beta" | "completed";
 }
 
-export type FreelanceProject = {
-  title: string;
-  description: string;
-  url: string;
-  image?: string; // Add your screenshot path here e.g. "/hatchpros-screenshot.png"
-  techStack: TechChip[];
-}
-
 export type OtherProject = {
   title: string;
+  slug: string;
   description: string;
+  details: string[];
   techStack: string[];
   githubLink?: string;
   liveLink?: string;
@@ -112,15 +108,23 @@ export const projectData = [
 export const mainProjects: MainProject[] = [
   {
     title: "Excileboard",
-    description: "A modern whiteboard built for designs",
+    slug: "excileboard",
+    description: "High-performance virtual infinite whiteboard engine",
     longDescription:
-      "Excileboard is a whiteboard platform. Built with a focus on performance and seamless user experience.",
+      "Built with TypeScript, Fabric.js, and MobX. Features reactive 60 FPS canvas sync and auto-persistence.",
+    details: [
+      "Built a full-featured whiteboard with drawing tools — rectangles, circles, diamonds, lines, arrows, freehand pencil, and text",
+      "Architected with a Manager Pattern using MobX for reactive state — RootStore orchestrates Canvas, Element, Tool, Style, Selection, Eraser, Board, and Shortcut managers",
+      "FabricSyncManager acts as a reactive bridge between MobX models and Fabric.js canvas objects with per-element geometry and style reactions",
+      "Board persistence with auto-save to LocalStorage — supports multiple boards with create, rename, delete, and search",
+      "Arrow element binding — arrows snap to bounding-box edges of connected shapes and re-draw when bound elements move",
+      "Zoom (pinch/ctrl+scroll) and pan (two-finger/wheel) via CanvasZoomManager and CanvasPanningManager",
+      "Keyboard shortcut system — tool selection (1–9), zoom (ctrl+/-), undo/redo, with a discoverable shortcut dialog",
+      "Eraser tool with hit-test detection and smooth 180ms opacity fade-out animation before element removal",
+    ],
     techStack: [
-      // { name: "Next.js", image: "nextjs.svg" },
       { name: "React", image: "react.svg" },
       { name: "TypeScript", image: "typescript.svg" },
-      // { name: "Node.js", image: "nodejs.svg" },
-      // { name: "MongoDB", image: "mongodb.svg" },
       { name: "Tailwind", image: "tailwind.svg" },
       { name: "MobX", image: "mobx.svg"},
       { name: "FabricJS", image: "fabricjs.svg"},
@@ -130,60 +134,85 @@ export const mainProjects: MainProject[] = [
     liveLink: "https://excileboard.vercel.app/",
     status: "active",
   },
-]
-
-export const freelanceProjects: FreelanceProject[] = [
   {
-    title: "HatchPros",
-    description:
-      "A professional services platform connecting skilled contractors with clients. Designed and built a full-stack web experience with a seamless onboarding flow.",
-    url: "https://hatchpros.net/",
-    image: "/hatchpros.png",  // ← add your screenshot here
+    title: "Scalable Notifications",
+    slug: "scalable-notifications",
+    description: "A high-throughput, event-driven notification engine",
+    longDescription:
+      "A production-grade notification service designed for scale — built with TypeScript, Fastify, BullMQ, Redis, PostgreSQL, and Drizzle ORM inside a Turborepo monorepo.",
+    details: [
+      "Event-driven architecture — decouples notification triggers from delivery using message queues for high throughput",
+      "Built with Fastify for high-performance HTTP handling and low-overhead request processing",
+      "BullMQ + Redis for reliable job queuing — supports retries, rate limiting, and priority-based scheduling",
+      "PostgreSQL with Drizzle ORM for type-safe database queries and schema management with migrations",
+      "Turborepo monorepo setup — shared packages, parallel builds, and efficient dependency management across services",
+      "TypeScript end-to-end — full type safety from API layer through queue workers to database queries",
+    ],
     techStack: [
-      { name: "React", image: "react.svg" },
+      { name: "TypeScript", image: "typescript.svg" },
       { name: "Node.js", image: "nodejs.svg" },
-      { name: "Tailwind", image: "tailwind.svg" },
+      { name: "PostgreSQL", image: "postgresql.svg" },
+      { name: "Redis", image: "redis.svg" },
     ],
+    githubLink: "https://github.com/prateeeksagar/scalable-notifications",
+    status: "active",
   },
-  {
-    title: "Darpan Designs",
-    description:
-      "Portfolio & studio website for a creative design agency. Crafted a visually rich, responsive site that highlights their brand identity and project showcase.",
-    url: "https://www.darpandesigns.com/",
-    image: "/darpandesigns.png",  // ← add your screenshot here
-    techStack: [
-      { name: "Next.js", image: "nextjs.svg" },
-      { name: "Tailwind", image: "tailwind.svg" },
-    ],
-  },
-]
+];
 
 export const otherProjects: OtherProject[] = [
   {
     title: "ps-icons",
+    slug: "ps-icons",
     description:
       "Animated SVG icon library ready to drop into any project. Import via CLI like shadcn — built with Motion, Lucide icons, React, and Tailwind CSS.",
+    details: [
+      "Built a reusable animated SVG icon library with smooth Motion transitions",
+      "CLI-based import system inspired by shadcn — install icons directly into your project",
+      "Powered by Lucide icons with custom animation presets for hover, click, and mount states",
+      "React components with Tailwind CSS styling — drop-in ready with zero config",
+    ],
     techStack: ["React", "Motion", "Lucide", "Tailwind CSS", "CLI"],
     githubLink: "https://github.com/prateeeksagar/ps-icons"
   },
   {
     title: "ShortURL",
+    slug: "short-url",
     description:
       "A URL shortener service with analytics. Clean REST API backend for creating and resolving short links.",
+    details: [
+      "RESTful API service for creating short URLs and resolving them to original destinations",
+      "Click analytics tracking — logs visit count, timestamps, and referrer data per short link",
+      "MongoDB for flexible document storage of URL mappings and analytics data",
+      "Express.js backend with clean route architecture and input validation",
+    ],
     techStack: ["Node.js", "MongoDB", "Express"],
     githubLink: "https://github.com/prateeeksagar/short-URL",
   },
   {
     title: "Flight Reservation System",
+    slug: "flight-reservation",
     description:
       "Microservice architecture for searching and reserving flights. Designed for scalability with separate service boundaries.",
+    details: [
+      "Microservice-based architecture with separate services for search, booking, and user management",
+      "Prisma ORM with MySQL for type-safe database operations and migration management",
+      "Designed with clear service boundaries for independent scaling and deployment",
+      "RESTful APIs with input validation and error handling across all services",
+    ],
     techStack: ["Node.js", "Microservices", "Prisma", "MySQL"],
     githubLink: "https://github.com/prateeeksagar/FlightsandSearchService",
   },
   {
     title: "Lender System",
+    slug: "lender-system",
     description:
       "A peer-to-peer lending platform with dedicated frontend and backend. Handles loan requests, lender matching, and fund tracking.",
+    details: [
+      "Full-stack peer-to-peer lending platform with separate frontend and backend repositories",
+      "Loan request workflow — borrowers submit requests, system matches with eligible lenders",
+      "Fund tracking dashboard for lenders to monitor active loans and repayment status",
+      "React frontend with Node.js backend handling user authentication and transaction logic",
+    ],
     techStack: ["React", "Node.js", "P2P Lending"],
     githubLink: "https://github.com/prateeeksagar/LenderSystemFrontend",
   },
@@ -196,11 +225,9 @@ export const WorkExperience = [
     duration: "October 2024 - Present",
     location: "Remote",
     description: [
-      "Developed an AI-powered web video editor (supercut) using Next.js, Tailwind CSS, and Mobx and FabricJS.",
-      "Collaborated with the design teams to implement an intuitive, responsive, and visually engaging UI using NEXT.js, Material UI, Tailwind CSS and modern web development practices.",
-      "Built multilingual video dubbing feature enabling users to dub videos in multiple languages",
-      "Frontend Development of AI generated video streaming named stream",
-      "I didn't just add features — I architected and built these products from zero. I made the tech decisions, set up the project structure, and owned it end to end.",
+      "Architected and scaled an AI-powered video editing platform from 0-to-1 using Next.js, MobX, and Fabric.js, establishing core project structure and state management patterns including features like drag and drop, editing timeline orchestration with canvas. ([supercut](https://www.wishtales.ai/supercut))",
+      "Designed and implemented a high-performance frontend architecture for real-time video manipulation, managing complex client-side memory allocation and canvas rendering using fabric.js and mobX.",
+      "Engineered an automated multilingual video dubbing engine, integrating AI models to handle localized audio alignment and multi-language video rendering pipelines using react, zustand & tanstack query. ([spark](https://www.wishtales.ai/spark))",
     ],
     logo: "/wishtales_logo.png",
     website: "https://wishtales.ai",

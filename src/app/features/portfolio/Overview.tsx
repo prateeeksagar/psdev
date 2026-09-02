@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Item,
   ItemContent,
@@ -15,10 +17,27 @@ import {
   GithubIcon,
 } from "../../../components/svg/svg";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function Overview() {
   return (
-    <section className="p-2">
+    <motion.section
+      className="p-2"
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      {/* Bio */}
+      <motion.p
+        className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 px-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.15, duration: 0.5 }}
+      >
+        Passionate full-stack developer building products from zero to one. I love clean architecture,
+        performant backends, and pixel-perfect interfaces — always shipping, always learning.
+      </motion.p>
+
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-2 w-full">
           <Item className="p-0">
@@ -105,6 +124,6 @@ export default function Overview() {
           </Item>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

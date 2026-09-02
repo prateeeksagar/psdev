@@ -124,12 +124,44 @@ const CardSkills = ({skills}: CardSkillsProps) => {
   );
 };
 
+const renderFormattedText = (text: string) => {
+  const parts = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const [_, label, url] = match;
+    parts.push(
+      <Link
+        key={match.index}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 text-foreground hover:text-primary font-medium transition-colors"
+      >
+        {label}
+      </Link>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+};
+
 const CardExpPoints = ({description}: {description: string[]}) => {
   return (
     <ul className="list-decimal spacey-1 list-inside">
       {description.map((point, idx) => (
-        <li key={idx} className="text-md list-disc text-muted-foreground">
-          {point}
+        <li key={idx} className="text-md list-disc text-muted-foreground leading-relaxed">
+          {renderFormattedText(point)}
         </li>
       ))}
     </ul>
