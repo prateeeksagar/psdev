@@ -16,8 +16,79 @@ const fontSans = Alata({
 });
 
 export const metadata: Metadata = {
-  title: "Prateek Sagar",
-  description: "prateek sagar portfolio",
+  title: "Prateek Sagar | Full Stack Developer",
+  description:
+    "Full-stack engineer with 3+ years shipping production systems across fintech and AI-product startups — from complex real-time frontends to distributed backend architectures.",
+  keywords: [
+    "Prateek Sagar",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Fastify",
+    "MobX",
+    "Fabric.js",
+    "PostgreSQL",
+    "Redis",
+    "Distributed Systems",
+    "Portfolio",
+  ],
+  authors: [{ name: "Prateek Sagar", url: "https://www.prateeksagar.com" }],
+  creator: "Prateek Sagar",
+  metadataBase: new URL("https://www.prateeksagar.com"),
+  openGraph: {
+    title: "Prateek Sagar | Full Stack Developer",
+    description:
+      "Full-stack engineer with 3+ years shipping production systems across fintech and AI-product startups.",
+    url: "https://www.prateeksagar.com",
+    siteName: "Prateek Sagar Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prateek Sagar | Full Stack Developer",
+    description:
+      "Full-stack engineer with 3+ years shipping production systems across fintech and AI-product startups.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Prateek Sagar",
+  url: "https://www.prateeksagar.com",
+  jobTitle: "Full Stack Developer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Wishtales AI",
+  },
+  sameAs: [
+    "https://github.com/prateeeksagar",
+    "https://www.linkedin.com/in/prateek-sagar/",
+  ],
+  knowsAbout: [
+    "TypeScript",
+    "JavaScript",
+    "Next.js",
+    "React",
+    "Node.js",
+    "Fastify",
+    "BullMQ",
+    "Redis",
+    "PostgreSQL",
+    "MongoDB",
+    "MobX",
+    "Fabric.js",
+    "System Design",
+    "Microservices",
+  ],
 };
 
 export default function RootLayout({
@@ -37,6 +108,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={`${fontSans.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
